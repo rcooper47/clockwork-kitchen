@@ -37,16 +37,33 @@ offset_bottom = 145.0
 color = Color(1, 0.839216, 0.67451, 1)
 
 [node name="Score+Recipe Placeholder" type="ColorRect" parent="."]
+visible = false
 offset_left = 993.0
 offset_top = -4.0
 offset_right = 1161.0
 offset_bottom = 545.0
 
+[node name="ScoreContainer" type="VBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 50.0
+
+[node name="Label" type="Label" parent="ScoreContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_t2e6g")
+theme_override_font_sizes/font_size = 40
+text = "Score: "
+
+[node name="ScoreLabel" type="Label" parent="ScoreContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_t2e6g")
+theme_override_font_sizes/font_size = 40
+
 [node name="TimerContainer" type="VBoxContainer" parent="."]
-offset_left = 754.0
-offset_top = 25.0
-offset_right = 978.0
-offset_bottom = 111.0
+offset_left = 760.0
+offset_right = 984.0
+offset_bottom = 86.0
 
 [node name="Label" type="Label" parent="TimerContainer"]
 layout_mode = 2
@@ -158,15 +175,5 @@ position = Vector2(767, 38)
 script = ExtResource("9_xf0va")
 
 [node name="GameTimer" type="Timer" parent="."]
-
-[node name="ScoreContainer" type="VBoxContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Label" type="Label" parent="ScoreContainer"]
-layout_mode = 2
-
-[node name="ScoreLabel" type="Label" parent="ScoreContainer"]
-layout_mode = 2
 
 [connection signal="body_entered" from="table" to="SpawnManager/Spawner" method="_on_table_body_entered"]

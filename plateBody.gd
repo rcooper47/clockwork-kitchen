@@ -33,7 +33,7 @@ func _on_Area_body_entered(body: Node2D):
 			for active_recipe in active_recipes:
 				print(active_recipe.ingredient)
 				if active_recipe.ingredient == body.name:
-					print("valid food & you get 10 points")
+					get_tree().root.get_child(0).score += 10
 			#print(body.name)
 			# add points & validate active recipe
 			body.queue_free()
@@ -42,9 +42,9 @@ func _on_Area_body_entered(body: Node2D):
 			for active_recipe in active_recipes:
 				#print(active_recipe.ingredient)
 				if active_recipe.ingredient == body.name:
-					print("valid food & you get 10 points")
+					get_tree().root.get_child(0).score += 10
 			#print(body.name)
 		body.queue_free()
-
+		print(get_tree().root.get_child(0).score)
 		
 	
