@@ -1,7 +1,7 @@
 extends Node2D
 @onready var score_label = $VBoxContainer/FinalScore
-#@onready var final_score = get_tree().get_root().find_node("sample").score
-var final_score = get_node("/root/GameManager").score
+@onready var final_score = get_tree().get_root().find_node("sample").score
+
 
 
 func _on_new_game_button_pressed():
