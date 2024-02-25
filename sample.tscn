@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c6f8ii2013kui"]
+[gd_scene load_steps=16 format=3 uid="uid://c6f8ii2013kui"]
 
 [ext_resource type="Script" path="res://game_manager.gd" id="1_i7wdr"]
 [ext_resource type="Texture2D" uid="uid://dg1p4cxk8oi5r" path="res://Assets/generic background.png" id="1_jkkdi"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" path="res://OrderManager.gd" id="8_d3027"]
 [ext_resource type="Script" path="res://OrderSpawner.gd" id="9_xf0va"]
 [ext_resource type="Script" path="res://TimerLabel.gd" id="10_la7rq"]
+[ext_resource type="AudioStream" uid="uid://d2vx7qg6aypbc" path="res://Assets/Music/Run Amok.mp3" id="12_qx67o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yx64f"]
 size = Vector2(1140.75, 49)
@@ -176,5 +177,9 @@ position = Vector2(600, 38)
 script = ExtResource("9_xf0va")
 
 [node name="GameTimer" type="Timer" parent="."]
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_qx67o")
+autoplay = true
 
 [connection signal="body_entered" from="table" to="SpawnManager/Spawner" method="_on_table_body_entered"]
