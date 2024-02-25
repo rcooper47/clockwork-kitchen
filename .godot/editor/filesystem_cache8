@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1708897938
+::res://::1708901272
 baked_fish.gd::GDScript::-1::1708891514::0::1::::<>Sprite2D<>::
 baked_fish.tscn::PackedScene::700262803653429417::1708895182::0::1::::<><>::res://baked_fish.gd<>uid://b34b5bda86oai::::res://Assets/Orders/baked fish order.png
 cheese_order.gd::GDScript::-1::1708891431::0::1::::<>Sprite2D<>::
@@ -14,9 +14,9 @@ fish_order.gd::GDScript::-1::1708891674::0::1::::<>Sprite2D<>::
 fish_order.tscn::PackedScene::8874306580226976689::1708895182::0::1::::<><>::uid://daj0ly54s4fd6::::res://Assets/Orders/fish order.png<>res://fish_order.gd
 food.gd::GDScript::-1::1708890779::0::1::::<>RigidBody2D<>::
 food.tscn::PackedScene::2943374376137753778::1708895182::0::1::::<><>::res://food.gd<>res://Assets/Foods/baked fish64.png
-forward_plate.gd::GDScript::-1::1708887221::0::1::::<>CharacterBody2D<>::
+forward_plate.gd::GDScript::-1::1708900524::0::1::::<>CharacterBody2D<>::
 game_manager.gd::GDScript::-1::1708896799::0::1::::<>Node2D<>::
-game_over.gd::GDScript::-1::1708896799::0::1::::<>Node2D<>::
+game_over.gd::GDScript::-1::1708901272::0::1::::<>Node2D<>::
 game_over.tscn::PackedScene::4364922419515281536::1708897375::0::1::::<><>::res://game_over.gd<>uid://bscmx8ksd4txu::::res://Assets/End Screen Background.png<>uid://cfvueo3pf46k2::::res://Assets/New Game Button End Screen transparent.png<>uid://br0m6bl6c46hn::::res://Assets/Main Menu Button End Screen transparent.png<>uid://buuhuumykppev::::res://Bungee/Bungee-Regular.ttf
 Global.gd::GDScript::-1::1708896799::0::1::::<>Node<>::
 grape_order.gd::GDScript::-1::1708891791::0::1::::<>Sprite2D<>::
@@ -29,12 +29,12 @@ milk_order.gd::GDScript::-1::1708891744::0::1::::<>Sprite2D<>::
 milk_order.tscn::PackedScene::6032595284528938846::1708897375::0::1::::<><>::res://milk_order.gd<>uid://breeh4mfahaus::::res://Assets/Orders/milk order.png
 OrderManager.gd::GDScript::-1::1708896799::0::1::::<>Node2D<>::
 OrderSpawner.gd::GDScript::-1::1708896799::0::1::::<>Marker2D<>::
-plate2.tscn::PackedScene::5512753870068712500::1708897788::0::1::::<><>::res://rewind_plate.gd<>res://plateBody.gd<>uid://bjh7bumrlk8t1::::res://Assets/Characters/spritesheet_players.png
-plate.tscn::PackedScene::2160438980141336806::1708897788::0::1::::<><>::res://forward_plate.gd<>res://plateBody.gd<>uid://bjh7bumrlk8t1::::res://Assets/Characters/spritesheet_players.png
+plate2.tscn::PackedScene::5512753870068712500::1708901222::0::1::::<><>::res://rewind_plate.gd<>res://plateBody.gd<>uid://cnsk10i5sb0fh::::res://Assets/Characters/full.png<>res://addons/godot_state_charts/state_chart.gd<>res://addons/godot_state_charts/compound_state.gd<>res://addons/godot_state_charts/animation_tree_state.gd<>res://addons/godot_state_charts/transition.gd
+plate.tscn::PackedScene::2160438980141336806::1708901222::0::1::::<><>::res://forward_plate.gd<>res://plateBody.gd<>uid://cnsk10i5sb0fh::::res://Assets/Characters/full.png<>res://addons/godot_state_charts/state_chart.gd<>res://addons/godot_state_charts/compound_state.gd<>res://addons/godot_state_charts/animation_tree_state.gd<>res://addons/godot_state_charts/transition.gd
 plateBody.gd::GDScript::-1::1708896799::0::1::::<>Area2D<>::
 README.md::TextFile::-1::1708895037::0::1::::<><>::
-rewind_plate.gd::GDScript::-1::1708887221::0::1::::<>CharacterBody2D<>::
-sample.tscn::PackedScene::6961035819116300856::1708897788::0::1::::<><>::res://game_manager.gd<>uid://dg1p4cxk8oi5r::::res://Assets/generic background.png<>uid://51sd5g03q7lq::::res://plate.tscn<>res://table.gd<>uid://buuhuumykppev::::res://Bungee/Bungee-Regular.ttf<>uid://cksoir7djc5q3::::res://plate2.tscn<>res://SpawnerManager.gd<>uid://dot76xlf4lh7g::::res://spawner.tscn<>res://OrderManager.gd<>res://OrderSpawner.gd<>res://TimerLabel.gd
+rewind_plate.gd::GDScript::-1::1708901222::0::1::::<>CharacterBody2D<>::
+sample.tscn::PackedScene::6961035819116300856::1708901222::0::1::::<><>::res://game_manager.gd<>uid://dg1p4cxk8oi5r::::res://Assets/generic background.png<>uid://51sd5g03q7lq::::res://plate.tscn<>res://table.gd<>uid://buuhuumykppev::::res://Bungee/Bungee-Regular.ttf<>uid://cksoir7djc5q3::::res://plate2.tscn<>res://SpawnerManager.gd<>uid://dot76xlf4lh7g::::res://spawner.tscn<>res://OrderManager.gd<>res://OrderSpawner.gd<>res://TimerLabel.gd
 Spawner.gd::GDScript::-1::1708881259::0::1::::<>Marker2D<>::
 spawner.tscn::PackedScene::8183128568014745194::1708890606::0::1::::<><>::res://Spawner.gd
 SpawnerManager.gd::GDScript::-1::1708881259::0::1::::<>Node2D<>::
@@ -102,7 +102,7 @@ event_inspector_plugin.gd::GDScript::-1::1708881259::0::1::::<>EditorInspectorPl
 ::res://addons/godot_state_charts/utilities/event_refactor/::1708881259
 event_refactor.gd::GDScript::-1::1708881259::0::1::::<>ConfirmationDialog<>::
 event_refactor.tscn::PackedScene::6269517391210544356::1708881259::0::1::::<><>::res://addons/godot_state_charts/utilities/event_refactor/event_refactor.gd
-::res://Assets/::1708897100
+::res://Assets/::1708901272
 Credits button transparent 2.png::CompressedTexture2D::6289396305675158187::1708835382::1708836299::1::::<><>::
 End Screen Background.png::CompressedTexture2D::3654720051400421830::1708892158::1708892189::1::::<><>::
 Gameplay Background UI Texture.png::CompressedTexture2D::5995102178353436451::1708835382::1708836299::1::::<><>::
@@ -112,10 +112,13 @@ How to Play Button transparent 2.png::CompressedTexture2D::2504829708652526676::
 Main Menu Button End Screen transparent.png::CompressedTexture2D::3632024503843940767::1708892158::1708892188::1::::<><>::
 New Game Button End Screen transparent.png::CompressedTexture2D::5168359780713382915::1708892158::1708892188::1::::<><>::
 order blank.png::CompressedTexture2D::8346312600451518321::1708887221::1708887858::1::::<><>::
+resized End Screen Background.png::CompressedTexture2D::4784138376768131908::1708901272::1708901363::1::::<><>::
+resized generic background.png::CompressedTexture2D::5775988697070023433::1708901272::1708901363::1::::<><>::
+resized Start Screen Background.png::CompressedTexture2D::2739165435140396894::1708901272::1708901363::1::::<><>::
 Return to Main Menu Button transparent.png::CompressedTexture2D::5080331623545257368::1708838813::1708838896::1::::<><>::
 Start Button transparent 2.png::CompressedTexture2D::763093912352503941::1708835382::1708836299::1::::<><>::
 Start Screen Background.png::CompressedTexture2D::8406178979769568162::1708835382::1708836299::1::::<><>::
-::res://Assets/Characters/::1708898602
+::res://Assets/Characters/::1708898613
 full.png::CompressedTexture2D::5723110061652265085::1708473134::1708898613::1::::<><>::
 spritesheet_players.png::CompressedTexture2D::3034516720068432324::1708897240::1708897247::1::::<><>::
 ::res://Assets/Foods/::1708892893
@@ -127,6 +130,13 @@ fish64.png::CompressedTexture2D::6880693289451499399::1708889727::1708892893::1:
 grapes64.png::CompressedTexture2D::7891241411450793587::1708889727::1708892893::1::::<><>::
 ugly milk64.png::CompressedTexture2D::8716192468393154541::1708889727::1708892893::1::::<><>::
 wine.png::CompressedTexture2D::501305178844398499::1708889727::1708892893::1::::<><>::
+::res://Assets/Music/::1708901272
+Constancy Part One.mp3::AudioStreamMP3::3779825255171373567::1708901272::1708901362::1::::<><>::
+Constancy Part Three.mp3::AudioStreamMP3::8612972723024431306::1708901272::1708901362::1::::<><>::
+Harlequin.mp3::AudioStreamMP3::8411226784665330650::1708901272::1708901362::1::::<><>::
+Mesmerizing Galaxy Loop.mp3::AudioStreamMP3::5684774692717938655::1708901272::1708901362::1::::<><>::
+Move Forward.mp3::AudioStreamMP3::1585362942770076850::1708901272::1708901362::1::::<><>::
+Run Amok.mp3::AudioStreamMP3::9099167249431905792::1708901272::1708901362::1::::<><>::
 ::res://Assets/Orders/::1708892188
 baked fish order.png::CompressedTexture2D::4411689608438751752::1708892158::1708892188::1::::<><>::
 cheese order.png::CompressedTexture2D::2469477114522134501::1708892158::1708892188::1::::<><>::
