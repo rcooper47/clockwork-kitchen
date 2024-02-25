@@ -37,6 +37,7 @@ offset_bottom = 145.0
 color = Color(1, 0.839216, 0.67451, 1)
 
 [node name="Score+Recipe Placeholder" type="ColorRect" parent="."]
+visible = false
 offset_left = 993.0
 offset_top = -4.0
 offset_right = 1161.0
