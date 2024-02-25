@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://c6f8ii2013kui"]
+[gd_scene load_steps=5 format=3 uid="uid://c6f8ii2013kui"]
 
+[ext_resource type="Script" path="res://SpawnerManager.gd" id="1_anusm"]
 [ext_resource type="Script" path="res://table.gd" id="2_5txlr"]
 [ext_resource type="PackedScene" uid="uid://dot76xlf4lh7g" path="res://spawner.tscn" id="3_w4x53"]
 
@@ -11,6 +12,7 @@ size = Vector2(1155, 136)
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Spawners" type="Node2D" parent="."]
+script = ExtResource("1_anusm")
 
 [node name="Spawner1" parent="Spawners" instance=ExtResource("3_w4x53")]
 position = Vector2(170, 0)
