@@ -9,6 +9,7 @@ size = Vector2(18, 15.75)
 [node name="food" type="RigidBody2D" groups=["food_group"]]
 collision_layer = 4
 collision_mask = 3
+gravity_scale = 0.5
 script = ExtResource("1_4ay8g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

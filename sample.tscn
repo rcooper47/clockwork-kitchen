@@ -11,7 +11,7 @@
 [ext_resource type="Script" path="res://OrderManager.gd" id="8_d3027"]
 [ext_resource type="Script" path="res://OrderSpawner.gd" id="9_xf0va"]
 [ext_resource type="Script" path="res://TimerLabel.gd" id="10_la7rq"]
-[ext_resource type="AudioStream" uid="uid://d2vx7qg6aypbc" path="res://Assets/Music/Run Amok.mp3" id="12_qx67o"]
+[ext_resource type="AudioStream" uid="uid://5gtix8j8elxx" path="res://Assets/Music/Run Amok.mp3" id="12_qx67o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yx64f"]
 size = Vector2(1815.75, 49)
