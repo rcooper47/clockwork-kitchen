@@ -7,7 +7,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	timer.start(10)
+	timer.start(60)
 	timer.timeout.connect(_on_Timer_timeout)
 	pass # Replace with function body.
 
