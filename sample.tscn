@@ -1,38 +1,76 @@
-[gd_scene load_steps=5 format=3 uid="uid://c6f8ii2013kui"]
+[gd_scene load_steps=10 format=3 uid="uid://c6f8ii2013kui"]
 
-[ext_resource type="Script" path="res://SpawnerManager.gd" id="1_anusm"]
+[ext_resource type="PackedScene" uid="uid://bh617frlfuel3" path="res://food.tscn" id="1_5y1yw"]
 [ext_resource type="Script" path="res://table.gd" id="2_5txlr"]
-[ext_resource type="PackedScene" uid="uid://dot76xlf4lh7g" path="res://spawner.tscn" id="3_w4x53"]
+[ext_resource type="Script" path="res://Spawner.gd" id="3_yiyl5"]
+[ext_resource type="Script" path="res://forward_plate.gd" id="4_d5tet"]
+[ext_resource type="Texture2D" uid="uid://b436idpwesawl" path="res://icon.svg" id="5_6cy0s"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ljwgx"]
+radius = 52.1536
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5yyel"]
+size = Vector2(135, 116)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yx64f"]
+size = Vector2(1140.75, 49)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v04c3"]
 size = Vector2(1155, 136)
 
 [node name="sample" type="Node2D"]
 
+[node name="food" parent="." instance=ExtResource("1_5y1yw")]
+
+[node name="food2" parent="." instance=ExtResource("1_5y1yw")]
+position = Vector2(432, -28)
+
 [node name="Timer" type="Timer" parent="."]
 
-[node name="Spawners" type="Node2D" parent="."]
-script = ExtResource("1_anusm")
+[node name="Spawner" type="Marker2D" parent="."]
+position = Vector2(579, 6)
+script = ExtResource("3_yiyl5")
 
-[node name="Spawner1" parent="Spawners" instance=ExtResource("3_w4x53")]
-position = Vector2(170, 0)
+[node name="plate" type="CharacterBody2D" parent="."]
+position = Vector2(464, 360)
+collision_layer = 2
+collision_mask = 15
+script = ExtResource("4_d5tet")
 
-[node name="Spawner2" parent="Spawners" instance=ExtResource("3_w4x53")]
-position = Vector2(340, 0)
+[node name="plateBody" type="Area2D" parent="plate"]
+position = Vector2(-464, -360)
+collision_layer = 16
+collision_mask = 4
 
-[node name="Spawner3" parent="Spawners" instance=ExtResource("3_w4x53")]
-position = Vector2(510, 0)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plate/plateBody"]
+position = Vector2(354, 356)
+shape = SubResource("CircleShape2D_ljwgx")
 
-[node name="Spawner4" parent="Spawners" instance=ExtResource("3_w4x53")]
-position = Vector2(680, 0)
+[node name="Sprite2D" type="Sprite2D" parent="plate"]
+position = Vector2(-107, 68)
+texture = ExtResource("5_6cy0s")
 
-[node name="Spawner5" parent="Spawners" instance=ExtResource("3_w4x53")]
-position = Vector2(850, 0)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plate"]
+position = Vector2(-104.5, 73)
+shape = SubResource("RectangleShape2D_5yyel")
 
-[node name="Spawner6" parent="Spawners" instance=ExtResource("3_w4x53")]
-position = Vector2(1020, 0)
+[node name="platform" type="StaticBody2D" parent="."]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="platform"]
+position = Vector2(570.625, 522)
+shape = SubResource("RectangleShape2D_yx64f")
+
+[node name="ColorRect" type="ColorRect" parent="platform"]
+offset_left = -1.0
+offset_top = 505.0
+offset_right = 1142.0
+offset_bottom = 545.0
+color = Color(0.0901961, 0.188235, 1, 1)
 
 [node name="table" type="Area2D" parent="."]
+collision_mask = 7
 script = ExtResource("2_5txlr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="table"]
@@ -40,10 +78,22 @@ position = Vector2(570, 581)
 shape = SubResource("RectangleShape2D_v04c3")
 
 [node name="ColorRect" type="ColorRect" parent="table"]
+visible = false
 offset_left = -8.0
 offset_top = 528.0
 offset_right = 1164.0
 offset_bottom = 656.0
 color = Color(0.764706, 0.65098, 0.317647, 1)
 
-[connection signal="body_entered" from="table" to="Spawners/Spawner1" method="_on_table_body_entered"]
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Spawner" type="Marker2D" parent="."]
+position = Vector2(32, 27)
+script = ExtResource("3_yiyl5")
+
+[connection signal="timeout" from="Timer" to="Spawner" method="_on_timer_timeout"]
+[connection signal="body_entered" from="plate/plateBody" to="food" method="_on_plate_body_body_entered"]
+[connection signal="body_entered" from="plate/plateBody" to="Spawner" method="_on_plate_body_body_entered"]
+[connection signal="body_entered" from="table" to="food" method="_on_table_body_entered"]
+[connection signal="body_entered" from="table" to="food2" method="_on_table_body_entered"]
+[connection signal="body_entered" from="table" to="Spawner" method="_on_table_body_entered"]

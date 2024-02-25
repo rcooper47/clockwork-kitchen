@@ -1,3 +1,8 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1708821810
-icon.svg::CompressedTexture2D::4481596421184463047::1708821690::1708821811::1::::<><>::
+::res://::1708826428
+food.gd::GDScript::-1::1708826371::0::1::::<>RigidBody2D<>::
+food.tscn::PackedScene::2943374376137753778::1708826371::0::1::::<><>::res://food.gd
+icon.svg::CompressedTexture2D::4481596421184463047::1708819110::1708826429::1::::<><>::
+sample.tscn::PackedScene::6961035819116300856::1708826371::0::1::::<><>::uid://bh617frlfuel3::::res://food.tscn<>res://table.gd<>res://Spawner.gd
+Spawner.gd::GDScript::-1::1708826371::0::1::::<>Marker2D<>::
+table.gd::GDScript::-1::1708826371::0::1::::<>Area2D<>::
