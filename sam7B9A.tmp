@@ -1,10 +1,9 @@
-[gd_scene load_steps=15 format=3 uid="uid://c6f8ii2013kui"]
+[gd_scene load_steps=14 format=3 uid="uid://c6f8ii2013kui"]
 
 [ext_resource type="Script" path="res://game_manager.gd" id="1_i7wdr"]
 [ext_resource type="Texture2D" uid="uid://dg1p4cxk8oi5r" path="res://Assets/generic background.png" id="1_jkkdi"]
 [ext_resource type="PackedScene" uid="uid://51sd5g03q7lq" path="res://plate.tscn" id="1_olk5h"]
 [ext_resource type="Script" path="res://table.gd" id="2_5txlr"]
-[ext_resource type="FontFile" uid="uid://buuhuumykppev" path="res://Bungee/Bungee-Regular.ttf" id="3_t2e6g"]
 [ext_resource type="PackedScene" uid="uid://cksoir7djc5q3" path="res://plate2.tscn" id="5_4cem8"]
 [ext_resource type="Script" path="res://SpawnerManager.gd" id="6_6syyh"]
 [ext_resource type="PackedScene" uid="uid://dot76xlf4lh7g" path="res://spawner.tscn" id="7_ahn1g"]
@@ -24,6 +23,14 @@ size = Vector2(2, 668)
 [node name="sample" type="Node2D"]
 script = ExtResource("1_i7wdr")
 
+[node name="TimerLabel" type="Label" parent="."]
+offset_left = 936.0
+offset_top = 179.0
+offset_right = 986.0
+offset_bottom = 234.0
+theme_override_font_sizes/font_size = 40
+script = ExtResource("10_la7rq")
+
 [node name="Timer" type="Timer" parent="."]
 
 [node name="TextureRect" type="TextureRect" parent="."]
@@ -31,43 +38,11 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("1_jkkdi")
 
-[node name="Order Placeholder" type="ColorRect" parent="."]
-offset_right = 993.0
-offset_bottom = 145.0
-color = Color(1, 0.839216, 0.67451, 1)
-
-[node name="Score+Recipe Placeholder" type="ColorRect" parent="."]
-offset_left = 993.0
-offset_top = -4.0
-offset_right = 1161.0
-offset_bottom = 545.0
-
-[node name="TimerContainer" type="VBoxContainer" parent="."]
-offset_left = 754.0
-offset_top = 25.0
-offset_right = 978.0
-offset_bottom = 111.0
-
-[node name="Label" type="Label" parent="TimerContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_t2e6g")
-theme_override_font_sizes/font_size = 40
-text = "Time Left"
-
-[node name="TimerLabel" type="Label" parent="TimerContainer"]
-layout_mode = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("3_t2e6g")
-theme_override_font_sizes/font_size = 40
-horizontal_alignment = 1
-script = ExtResource("10_la7rq")
+[node name="rewindPlate" parent="." instance=ExtResource("1_olk5h")]
+position = Vector2(278, 477)
 
 [node name="fastForwardPlate" parent="." groups=["active_foods"] instance=ExtResource("5_4cem8")]
-position = Vector2(243, 465)
-
-[node name="rewindPlate" parent="." instance=ExtResource("1_olk5h")]
-position = Vector2(781, 465)
+position = Vector2(800, 477)
 
 [node name="platform" type="StaticBody2D" parent="."]
 position = Vector2(0, 34)
@@ -81,7 +56,7 @@ shape = SubResource("RectangleShape2D_yx64f")
 [node name="ColorRect" type="ColorRect" parent="platform"]
 offset_left = -1.0
 offset_top = 505.0
-offset_right = 1161.0
+offset_right = 1142.0
 offset_bottom = 545.0
 color = Color(0.0901961, 0.188235, 1, 1)
 
@@ -124,6 +99,17 @@ position = Vector2(700, 0)
 [node name="Spawner6" parent="SpawnManager" instance=ExtResource("7_ahn1g")]
 position = Vector2(840, 0)
 
+[node name="Order Placeholder" type="ColorRect" parent="."]
+offset_right = 993.0
+offset_bottom = 145.0
+color = Color(1, 0.839216, 0.67451, 1)
+
+[node name="Score+Recipe Placeholder" type="ColorRect" parent="."]
+offset_left = 993.0
+offset_top = 4.0
+offset_right = 1147.0
+offset_bottom = 545.0
+
 [node name="Wall" type="StaticBody2D" parent="."]
 position = Vector2(7, 0)
 collision_layer = 8
@@ -146,27 +132,17 @@ shape = SubResource("RectangleShape2D_xivha")
 script = ExtResource("8_d3027")
 
 [node name="OrderSpawner" type="Marker2D" parent="OrderManager"]
-position = Vector2(512, 40)
+position = Vector2(234, 32)
 script = ExtResource("9_xf0va")
 
 [node name="OrderSpawner2" type="Marker2D" parent="OrderManager"]
-position = Vector2(640, 38)
+position = Vector2(376, 31)
 script = ExtResource("9_xf0va")
 
 [node name="OrderSpawner3" type="Marker2D" parent="OrderManager"]
-position = Vector2(767, 38)
+position = Vector2(482, 30)
 script = ExtResource("9_xf0va")
 
 [node name="GameTimer" type="Timer" parent="."]
-
-[node name="ScoreContainer" type="VBoxContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Label" type="Label" parent="ScoreContainer"]
-layout_mode = 2
-
-[node name="ScoreLabel" type="Label" parent="ScoreContainer"]
-layout_mode = 2
 
 [connection signal="body_entered" from="table" to="SpawnManager/Spawner" method="_on_table_body_entered"]
