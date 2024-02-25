@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cksoir7djc5q3"]
 
-[ext_resource type="Script" path="res://plate2.gd" id="1_2m3dj"]
+[ext_resource type="Script" path="res://rewind_plate.gd" id="1_buk1d"]
 [ext_resource type="Script" path="res://plateBody.gd" id="2_npvvf"]
 [ext_resource type="Texture2D" uid="uid://b436idpwesawl" path="res://icon.svg" id="2_wl7lr"]
 
@@ -10,11 +10,11 @@ radius = 52.1536
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5yyel"]
 size = Vector2(135, 116)
 
-[node name="plate" type="CharacterBody2D"]
+[node name="rewindPlate" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
 collision_layer = 2
 collision_mask = 15
-script = ExtResource("1_2m3dj")
+script = ExtResource("1_buk1d")
 
 [node name="plateBody" type="Area2D" parent="."]
 collision_layer = 16
