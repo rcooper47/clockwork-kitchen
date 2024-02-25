@@ -13,13 +13,13 @@
 [ext_resource type="Script" path="res://TimerLabel.gd" id="10_la7rq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yx64f"]
-size = Vector2(1140.75, 49)
+size = Vector2(1815.75, 49)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v04c3"]
-size = Vector2(1155, 136)
+size = Vector2(1806.5, 136)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xivha"]
-size = Vector2(2, 668)
+size = Vector2(53, 1565)
 
 [node name="sample" type="Node2D"]
 script = ExtResource("1_i7wdr")
@@ -32,15 +32,9 @@ offset_bottom = 1080.0
 texture = ExtResource("1_jkkdi")
 
 [node name="Order Placeholder" type="ColorRect" parent="."]
-offset_right = 1018.0
-offset_bottom = 145.0
+offset_right = 1907.0
+offset_bottom = 190.0
 color = Color(1, 0.839216, 0.67451, 1)
-
-[node name="Score+Recipe Placeholder" type="ColorRect" parent="."]
-offset_left = 993.0
-offset_top = -4.0
-offset_right = 1161.0
-offset_bottom = 545.0
 
 [node name="ScoreContainer" type="VBoxContainer" parent="."]
 offset_right = 40.0
@@ -50,65 +44,68 @@ offset_bottom = 50.0
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_t2e6g")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 75
 text = "Score: "
 
 [node name="ScoreLabel" type="Label" parent="ScoreContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_t2e6g")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 75
 horizontal_alignment = 1
 
 [node name="TimerContainer" type="VBoxContainer" parent="."]
-offset_left = 743.0
-offset_right = 982.0
-offset_bottom = 86.0
+offset_left = 1345.0
+offset_top = 5.0
+offset_right = 1794.0
+offset_bottom = 161.0
 
 [node name="Label" type="Label" parent="TimerContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_t2e6g")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 75
 text = "Time Left:"
 
 [node name="TimerLabel" type="Label" parent="TimerContainer"]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_t2e6g")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 75
 horizontal_alignment = 1
 script = ExtResource("10_la7rq")
 
 [node name="fastForwardPlate" parent="." groups=["active_foods"] instance=ExtResource("5_4cem8")]
-position = Vector2(243, 465)
+position = Vector2(333, 619)
+scale = Vector2(1.2, 1.2)
 
 [node name="rewindPlate" parent="." instance=ExtResource("1_olk5h")]
-position = Vector2(781, 465)
+position = Vector2(1328, 656)
+scale = Vector2(1.2, 1.2)
 
 [node name="platform" type="StaticBody2D" parent="."]
-position = Vector2(0, 34)
+position = Vector2(2, 479)
 collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="platform"]
-position = Vector2(570.625, 522)
+position = Vector2(908.125, 522)
 shape = SubResource("RectangleShape2D_yx64f")
 
 [node name="ColorRect" type="ColorRect" parent="platform"]
-offset_left = -1.0
+offset_left = -48.0
 offset_top = 505.0
-offset_right = 1161.0
-offset_bottom = 545.0
+offset_right = 1820.0
+offset_bottom = 602.0
 color = Color(0.0901961, 0.188235, 1, 1)
 
 [node name="table" type="Area2D" parent="."]
-position = Vector2(0, 34)
+position = Vector2(7, 506)
 collision_mask = 7
 script = ExtResource("2_5txlr")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="table"]
-position = Vector2(570, 581)
+position = Vector2(895.75, 581)
 shape = SubResource("RectangleShape2D_v04c3")
 
 [node name="ColorRect" type="ColorRect" parent="table"]
@@ -120,26 +117,26 @@ offset_bottom = 656.0
 color = Color(0.764706, 0.65098, 0.317647, 1)
 
 [node name="SpawnManager" type="Node2D" parent="."]
-position = Vector2(0, 148)
+position = Vector2(-32, 193)
 script = ExtResource("6_6syyh")
 
 [node name="Spawner" parent="SpawnManager" instance=ExtResource("7_ahn1g")]
-position = Vector2(140, 0)
+position = Vector2(300, 0)
 
 [node name="Spawner2" parent="SpawnManager" instance=ExtResource("7_ahn1g")]
-position = Vector2(280, 0)
+position = Vector2(550, 0)
 
 [node name="Spawner3" parent="SpawnManager" instance=ExtResource("7_ahn1g")]
-position = Vector2(420, 0)
+position = Vector2(800, 0)
 
 [node name="Spawner4" parent="SpawnManager" instance=ExtResource("7_ahn1g")]
-position = Vector2(560, 0)
+position = Vector2(1050, 0)
 
 [node name="Spawner5" parent="SpawnManager" instance=ExtResource("7_ahn1g")]
-position = Vector2(700, 0)
+position = Vector2(1300, 0)
 
 [node name="Spawner6" parent="SpawnManager" instance=ExtResource("7_ahn1g")]
-position = Vector2(840, 0)
+position = Vector2(1550, 0)
 
 [node name="Wall" type="StaticBody2D" parent="."]
 position = Vector2(7, 0)
@@ -147,32 +144,32 @@ collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
-position = Vector2(-9, 324)
+position = Vector2(-36.5, 772.5)
 shape = SubResource("RectangleShape2D_xivha")
 
 [node name="Wall2" type="StaticBody2D" parent="."]
-position = Vector2(1004, 0)
+position = Vector2(1056, 0)
 collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2"]
-position = Vector2(-9, 324)
+position = Vector2(775, 552)
 shape = SubResource("RectangleShape2D_xivha")
 
 [node name="OrderManager" type="Node2D" parent="."]
-position = Vector2(0, 31)
+position = Vector2(638, 31)
 script = ExtResource("8_d3027")
 
 [node name="OrderSpawner" type="Marker2D" parent="OrderManager"]
-position = Vector2(280, 38)
+position = Vector2(0, 38)
 script = ExtResource("9_xf0va")
 
 [node name="OrderSpawner2" type="Marker2D" parent="OrderManager"]
-position = Vector2(440, 38)
+position = Vector2(200, 38)
 script = ExtResource("9_xf0va")
 
 [node name="OrderSpawner3" type="Marker2D" parent="OrderManager"]
-position = Vector2(600, 38)
+position = Vector2(400, 38)
 script = ExtResource("9_xf0va")
 
 [node name="GameTimer" type="Timer" parent="."]
