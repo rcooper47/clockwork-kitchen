@@ -1,11 +1,10 @@
-[gd_scene load_steps=13 format=3 uid="uid://c6f8ii2013kui"]
+[gd_scene load_steps=12 format=3 uid="uid://c6f8ii2013kui"]
 
 [ext_resource type="Texture2D" uid="uid://dg1p4cxk8oi5r" path="res://Assets/generic background.png" id="1_jkkdi"]
 [ext_resource type="PackedScene" uid="uid://51sd5g03q7lq" path="res://plate.tscn" id="1_olk5h"]
 [ext_resource type="Script" path="res://table.gd" id="2_5txlr"]
 [ext_resource type="PackedScene" uid="uid://cksoir7djc5q3" path="res://plate2.tscn" id="5_4cem8"]
 [ext_resource type="Script" path="res://SpawnerManager.gd" id="6_6syyh"]
-[ext_resource type="PackedScene" uid="uid://ccfgksatvye1j" path="res://wine_order.tscn" id="6_hc7qe"]
 [ext_resource type="PackedScene" uid="uid://dot76xlf4lh7g" path="res://spawner.tscn" id="7_ahn1g"]
 [ext_resource type="Script" path="res://OrderManager.gd" id="8_d3027"]
 [ext_resource type="Script" path="res://OrderSpawner.gd" id="9_xf0va"]
@@ -116,8 +115,6 @@ collision_mask = 2
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2"]
 position = Vector2(-9, 324)
 shape = SubResource("RectangleShape2D_xivha")
-
-[node name="WineOrder" parent="." instance=ExtResource("6_hc7qe")]
 
 [node name="OrderManager" type="Node2D" parent="."]
 script = ExtResource("8_d3027")
