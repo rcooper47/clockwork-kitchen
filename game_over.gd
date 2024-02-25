@@ -1,6 +1,6 @@
 extends Node2D
-@onready var score_label = $VBoxContainer/FinalScore
-@onready var final_score = get_tree().get_root().find_node("sample").score
+@onready var score_label = $FinalScore
+@onready var final_score = Global.Get_Score()#get_tree().get_root().find_node("sample").score
 
 
 
