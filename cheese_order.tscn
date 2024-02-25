@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://bpacjsuj8xi5v"]
+[gd_scene load_steps=3 format=3 uid="uid://cuhpsdv0ttcch"]
 
 [ext_resource type="Script" path="res://cheese_order.gd" id="1_7nuyj"]
 [ext_resource type="Texture2D" uid="uid://bbgh6r64ca6g4" path="res://Assets/Orders/cheese order.png" id="1_qrdme"]
