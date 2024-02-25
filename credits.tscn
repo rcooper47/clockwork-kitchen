@@ -1,15 +1,51 @@
-[gd_scene load_steps=3 format=3 uid="uid://bu10xk2j2ht53"]
+[gd_scene load_steps=5 format=3 uid="uid://bu10xk2j2ht53"]
 
-[ext_resource type="Texture2D" uid="uid://coj6xpuea45i0" path="res://Assets/resized generic background.png" id="1_74qv7"]
-[ext_resource type="AudioStream" uid="uid://dr3pw80ikws87" path="res://Assets/Music/Harlequin.mp3" id="2_weo72"]
+[ext_resource type="Texture2D" uid="uid://dg1p4cxk8oi5r" path="res://Assets/generic background.png" id="1_gixkm"]
+[ext_resource type="Script" path="res://credits.gd" id="1_r004s"]
+[ext_resource type="FontFile" uid="uid://buuhuumykppev" path="res://Bungee/Bungee-Regular.ttf" id="2_1vxco"]
+[ext_resource type="Texture2D" uid="uid://br0m6bl6c46hn" path="res://Assets/Main Menu Button End Screen transparent.png" id="4_87m8a"]
 
 [node name="Credits" type="Node2D"]
+script = ExtResource("1_r004s")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("1_74qv7")
+texture = ExtResource("1_gixkm")
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_weo72")
-autoplay = true
+[node name="Title" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 768.0
+offset_top = 56.0
+offset_right = 1002.0
+offset_bottom = 106.0
+theme_override_fonts/font = ExtResource("2_1vxco")
+theme_override_font_sizes/font_size = 100
+text = "CREDITS"
+
+[node name="Text" type="Label" parent="TextureRect"]
+custom_minimum_size = Vector2(975, 0)
+layout_mode = 0
+offset_left = 240.0
+offset_top = 248.0
+offset_right = 280.0
+offset_bottom = 273.0
+theme_override_fonts/font = ExtResource("2_1vxco")
+theme_override_font_sizes/font_size = 24
+text = "Contributors
+Sheneeka, Oni, Amadia, Ryan, & Elysia
+
+Music
+Harlequin by Kevin Macleod
+Run Amok by Kevin Macleod"
+autowrap_mode = 2
+
+[node name="TextureButton" type="TextureButton" parent="TextureRect"]
+layout_mode = 0
+offset_left = 656.0
+offset_top = 560.0
+offset_right = 1120.0
+offset_bottom = 843.0
+texture_normal = ExtResource("4_87m8a")
+
+[connection signal="pressed" from="TextureRect/TextureButton" to="." method="_on_texture_button_pressed"]
