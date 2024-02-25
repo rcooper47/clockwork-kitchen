@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://djvd6tvnauj2p"]
+[gd_scene load_steps=3 format=3 uid="uid://cr7h70gkd0wck"]
 
 [ext_resource type="Script" path="res://milk_order.gd" id="1_o3t1o"]
 [ext_resource type="Texture2D" uid="uid://breeh4mfahaus" path="res://Assets/Orders/milk order.png" id="1_s6gbs"]
