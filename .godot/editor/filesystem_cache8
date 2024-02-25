@@ -1,3 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1708819126
-icon.svg::CompressedTexture2D::4481596421184463047::1708819110::1708819127::1::::<><>::
+::res://::1708826588
+icon.svg::CompressedTexture2D::4481596421184463047::1708822464::1708822994::1::::<><>::
+start_screen.tscn::PackedScene::7302659539165259459::1708823708::0::1::::<><>::uid://dr1asl27uqksw::::res://Assets/Start Screen Background.png
+::res://Assets/::1708826560
+Credits button transparent 2.png::CompressedTexture2D::6289396305675158187::1708826402::1708826591::1::::<><>::
+Gameplay Background UI Texture.png::CompressedTexture2D::5995102178353436451::1708825864::1708826110::1::::<><>::
+How to Play Button transparent 2.png::CompressedTexture2D::2504829708652526676::1708826414::1708826591::1::::<><>::
+Start Button transparent 2.png::CompressedTexture2D::763093912352503941::1708826440::1708826591::1::::<><>::
+Start Screen Background.png::CompressedTexture2D::8406178979769568162::1708822201::1708822995::1::::<><>::
