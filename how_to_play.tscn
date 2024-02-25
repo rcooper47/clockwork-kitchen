@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://cwwfdfx3wbmy3"]
+[gd_scene load_steps=7 format=3 uid="uid://cwwfdfx3wbmy3"]
 
 [ext_resource type="Script" path="res://how_to_play.gd" id="1_dt2qp"]
 [ext_resource type="Texture2D" uid="uid://coj6xpuea45i0" path="res://Assets/resized generic background.png" id="2_oenav"]
 [ext_resource type="FontFile" uid="uid://buuhuumykppev" path="res://Bungee/Bungee-Regular.ttf" id="2_s6do3"]
 [ext_resource type="Texture2D" uid="uid://k4wbsknh8sbd" path="res://Assets/Start Button transparent 2.png" id="3_je1fx"]
 [ext_resource type="Texture2D" uid="uid://cem7k4plbhjtg" path="res://Assets/Return to Main Menu Button transparent.png" id="4_636jm"]
+[ext_resource type="AudioStream" uid="uid://dr3pw80ikws87" path="res://Assets/Music/Harlequin.mp3" id="6_o7o6w"]
 
 [node name="How to Play" type="Node2D"]
 script = ExtResource("1_dt2qp")
@@ -69,6 +70,10 @@ layout_mode = 2
 texture_normal = ExtResource("4_636jm")
 ignore_texture_size = true
 stretch_mode = 3
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_o7o6w")
+autoplay = true
 
 [connection signal="pressed" from="TextureRect/MarginContainer/VBoxContainer/MarginContainer/Start Game" to="." method="_on_start_game_pressed"]
 [connection signal="pressed" from="TextureRect/MarginContainer/VBoxContainer/MarginContainer2/Main Menu" to="." method="_on_main_menu_pressed"]
