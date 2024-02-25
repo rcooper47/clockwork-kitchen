@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://51sd5g03q7lq"]
+[gd_scene load_steps=20 format=3 uid="uid://51sd5g03q7lq"]
 
 [ext_resource type="Script" path="res://forward_plate.gd" id="1_xr8nr"]
 [ext_resource type="Script" path="res://plateBody.gd" id="2_22mbi"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" path="res://addons/godot_state_charts/compound_state.gd" id="5_obp8r"]
 [ext_resource type="Script" path="res://addons/godot_state_charts/animation_tree_state.gd" id="6_wana1"]
 [ext_resource type="Script" path="res://addons/godot_state_charts/transition.gd" id="7_3md3v"]
+[ext_resource type="Texture2D" uid="uid://vh2rabk23plb" path="res://Assets/Characters/fastforward plate.png" id="8_drip6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5mle5"]
 size = Vector2(67, 11)
@@ -134,3 +135,8 @@ animation_tree = NodePath("../../../AnimationTree")
 script = ExtResource("7_3md3v")
 to = NodePath("../../Idle")
 event = &"idling"
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(0, -32)
+scale = Vector2(1.25, 2)
+texture = ExtResource("8_drip6")
