@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://ccfgksatvye1j"]
+
+[ext_resource type="Texture2D" uid="uid://b436idpwesawl" path="res://icon.svg" id="1_laed7"]
+[ext_resource type="Script" path="res://WineOrder.gd" id="2_44lpj"]
+
+[node name="WineOrder" type="Sprite2D"]
+position = Vector2(72, 45)
+scale = Vector2(0.554688, 0.570313)
+texture = ExtResource("1_laed7")
+script = ExtResource("2_44lpj")

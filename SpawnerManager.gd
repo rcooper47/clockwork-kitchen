@@ -22,3 +22,4 @@ func activate_spawner():
 	curr.spawn_food()
 	prev = curr
 	get_tree().create_timer(randf_range(1, 2)).timeout.connect(activate_spawner)
+	
