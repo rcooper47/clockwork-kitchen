@@ -3,6 +3,7 @@ extends Marker2D
 
 func _ready():
 	spawn_food()
+	# small comment
 
 
 func _process(delta):
