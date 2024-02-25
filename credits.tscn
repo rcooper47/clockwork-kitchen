@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://bu10xk2j2ht53"]
+[gd_scene load_steps=3 format=3 uid="uid://bu10xk2j2ht53"]
 
 [ext_resource type="Texture2D" uid="uid://coj6xpuea45i0" path="res://Assets/resized generic background.png" id="1_74qv7"]
+[ext_resource type="AudioStream" uid="uid://dr3pw80ikws87" path="res://Assets/Music/Harlequin.mp3" id="2_weo72"]
 
 [node name="Credits" type="Node2D"]
 
@@ -8,3 +9,7 @@
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_74qv7")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_weo72")
+autoplay = true
