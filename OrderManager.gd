@@ -19,7 +19,7 @@ func activate_spawner():
 		curr = children.pick_random()
 	curr.spawn_recipe()
 	prev = curr
-	get_tree().create_timer(2).timeout.connect(prev.recipe_timeout)
+	#get_tree().create_timer(2).timeout.connect(prev.recipe_timeout)
 	get_tree().create_timer(randf_range(1, 2)).timeout.connect(activate_spawner)
 	
 
