@@ -31,9 +31,9 @@ func _on_Area_body_entered(body: Node2D):
 		if body.name in rewind_foods and self.get_parent().name == "rewindPlate": #recipe.ingredient == food.name:
 			#print("ok")
 			for active_recipe in active_recipes:
-				print(active_recipe.ingredient)
-				if active_recipe.ingredient == body.name:
-					Global.score += 10
+				print(active_recipe.name)
+				if active_recipe.name == body.name:
+					get_tree().root.get_child(0).score += 10
 			#print(body.name)
 			# add points & validate active recipe
 			body.queue_free()
@@ -41,8 +41,8 @@ func _on_Area_body_entered(body: Node2D):
 			#print("ok")
 			for active_recipe in active_recipes:
 				#print(active_recipe.ingredient)
-				if active_recipe.ingredient == body.name:
-					Global.score += 10
+				if active_recipe.name == body.name:
+					get_tree().root.get_child(0).score += 10
 			#print(body.name)
 		body.queue_free()
 		print(get_tree().root.get_child(0).score)

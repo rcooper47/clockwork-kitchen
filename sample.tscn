@@ -160,6 +160,7 @@ position = Vector2(-9, 324)
 shape = SubResource("RectangleShape2D_xivha")
 
 [node name="OrderManager" type="Node2D" parent="."]
+position = Vector2(0, 31)
 script = ExtResource("8_d3027")
 
 [node name="OrderSpawner" type="Marker2D" parent="OrderManager"]
