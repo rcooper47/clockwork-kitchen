@@ -1,16 +1,24 @@
 extends RigidBody2D
 var food_names = ["grape", "wine", "milk", "cheese", "fish", "baked fish", "coffee beans", "coffee"]
-var food_colors = {"grape":Color('#8c3cff'), "wine":Color('#8c119b'), "milk":Color(1, 1, 1), "cheese":Color('#ffff98'), "fish":Color('#82ffff'), 'baked fish':Color('#f26f75'), "coffee beans":Color('#513918'), "coffee":Color('#ca9855')}
+const GRAPE = preload("res://Assets/Foods/grapes64.png")
+const WINE = preload("res://Assets/Foods/wine.png")
+const MILK = preload("res://Assets/Foods/ugly milk64.png")
+const CHEESE = preload("res://Assets/Foods/cheese64.png")
+const FISH = preload("res://Assets/Foods/fish64.png")
+const BAKEDFISH = preload("res://Assets/Foods/baked fish64.png")
+const COFFEEBEANS = preload("res://Assets/Foods/coffee beans64.png")
+const COFFEE = preload("res://Assets/Foods/coffee.png")
+var food_colors = {"grape":GRAPE, "wine":WINE, "milk":MILK, "cheese":CHEESE, "fish":FISH, 'baked fish':BAKEDFISH, "coffee beans":COFFEEBEANS, "coffee":COFFEE}
 @export var food_id: String 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	self.name = food_names.pick_random()
 	food_id = self.name
 	#print(food_id)
-	var rect = get_child(1)
+	var sprite = get_child(1)
 	#print(self.name)
 	#print(food_colors[self.name])
-	rect.set_color(food_colors[self.name])
+	sprite.set_texture(food_colors[self.name])
 	#print(rect.get_color())
 	#print(get_child(1))
 	#self.connect(
