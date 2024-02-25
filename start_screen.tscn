@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://dcbp0apdgigop"]
 
 [ext_resource type="Script" path="res://start_screen.gd" id="1_gupy8"]
-[ext_resource type="Texture2D" uid="uid://dr1asl27uqksw" path="res://Assets/Start Screen Background.png" id="1_io77o"]
+[ext_resource type="Texture2D" uid="uid://bfa4wivihl5c1" path="res://Assets/resized Start Screen Background.png" id="2_aed38"]
 [ext_resource type="Texture2D" uid="uid://k4wbsknh8sbd" path="res://Assets/Start Button transparent 2.png" id="2_bhg03"]
 [ext_resource type="Texture2D" uid="uid://bbxmgdk3iksnc" path="res://Assets/How to Play Button transparent 2.png" id="3_xh7mh"]
 [ext_resource type="Texture2D" uid="uid://cvuvo5vprrbwd" path="res://Assets/Credits button transparent 2.png" id="4_imr4g"]
@@ -12,7 +12,7 @@ script = ExtResource("1_gupy8")
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("1_io77o")
+texture = ExtResource("2_aed38")
 
 [node name="MarginContainer" type="MarginContainer" parent="TextureRect"]
 layout_mode = 0

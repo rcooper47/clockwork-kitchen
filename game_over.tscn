@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://b3gnvtrokedm3"]
 
 [ext_resource type="Script" path="res://game_over.gd" id="1_6fity"]
-[ext_resource type="Texture2D" uid="uid://bscmx8ksd4txu" path="res://Assets/End Screen Background.png" id="2_ijcsd"]
+[ext_resource type="Texture2D" uid="uid://cafqcbp61w4gu" path="res://Assets/resized End Screen Background.png" id="2_yjae2"]
 [ext_resource type="Texture2D" uid="uid://cfvueo3pf46k2" path="res://Assets/New Game Button End Screen transparent.png" id="3_hdy7v"]
 [ext_resource type="Texture2D" uid="uid://br0m6bl6c46hn" path="res://Assets/Main Menu Button End Screen transparent.png" id="4_fhaj3"]
 [ext_resource type="FontFile" uid="uid://buuhuumykppev" path="res://Bungee/Bungee-Regular.ttf" id="5_4qtkb"]
@@ -12,7 +12,7 @@ script = ExtResource("1_6fity")
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 1920.0
 offset_bottom = 1080.0
-texture = ExtResource("2_ijcsd")
+texture = ExtResource("2_yjae2")
 
 [node name="NewGameButton" type="TextureButton" parent="TextureRect"]
 layout_mode = 2
