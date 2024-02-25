@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://b01807plib6ec"]
+
+[ext_resource type="Script" path="res://plate2.gd" id="1_2m3dj"]
+[ext_resource type="Script" path="res://plateBody.gd" id="2_npvvf"]
+[ext_resource type="Texture2D" uid="uid://b436idpwesawl" path="res://icon.svg" id="2_wl7lr"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ljwgx"]
+radius = 52.1536
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5yyel"]
+size = Vector2(135, 116)
+
+[node name="plate" type="CharacterBody2D"]
+position = Vector2(464, 360)
+collision_layer = 2
+collision_mask = 15
+script = ExtResource("1_2m3dj")
+
+[node name="plateBody" type="Area2D" parent="."]
+position = Vector2(-464, -360)
+collision_layer = 16
+collision_mask = 4
+script = ExtResource("2_npvvf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="plateBody"]
+position = Vector2(356, 360)
+shape = SubResource("CircleShape2D_ljwgx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-107, 68)
+texture = ExtResource("2_wl7lr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-104.5, 73)
+shape = SubResource("RectangleShape2D_5yyel")

@@ -1,16 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://c6f8ii2013kui"]
+[gd_scene load_steps=8 format=3 uid="uid://c6f8ii2013kui"]
 
+[ext_resource type="PackedScene" uid="uid://0c3yk276rs6j" path="res://plate.tscn" id="1_olk5h"]
 [ext_resource type="Script" path="res://table.gd" id="2_5txlr"]
-[ext_resource type="Script" path="res://forward_plate.gd" id="4_d5tet"]
-[ext_resource type="Texture2D" uid="uid://b436idpwesawl" path="res://icon.svg" id="5_6cy0s"]
+[ext_resource type="PackedScene" uid="uid://b01807plib6ec" path="res://plate2.tscn" id="5_4cem8"]
 [ext_resource type="Script" path="res://SpawnerManager.gd" id="6_6syyh"]
 [ext_resource type="PackedScene" uid="uid://dot76xlf4lh7g" path="res://spawner.tscn" id="7_ahn1g"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_ljwgx"]
-radius = 52.1536
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_5yyel"]
-size = Vector2(135, 116)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yx64f"]
 size = Vector2(1140.75, 49)
@@ -22,28 +16,7 @@ size = Vector2(1155, 136)
 
 [node name="Timer" type="Timer" parent="."]
 
-[node name="plate" type="CharacterBody2D" parent="."]
-position = Vector2(464, 360)
-collision_layer = 2
-collision_mask = 15
-script = ExtResource("4_d5tet")
-
-[node name="plateBody" type="Area2D" parent="plate"]
-position = Vector2(-464, -360)
-collision_layer = 16
-collision_mask = 4
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="plate/plateBody"]
-position = Vector2(356, 360)
-shape = SubResource("CircleShape2D_ljwgx")
-
-[node name="Sprite2D" type="Sprite2D" parent="plate"]
-position = Vector2(-107, 68)
-texture = ExtResource("5_6cy0s")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="plate"]
-position = Vector2(-104.5, 73)
-shape = SubResource("RectangleShape2D_5yyel")
+[node name="plate" parent="." instance=ExtResource("1_olk5h")]
 
 [node name="platform" type="StaticBody2D" parent="."]
 collision_layer = 8
@@ -98,5 +71,7 @@ position = Vector2(850, 0)
 [node name="Spawner6" parent="SpawnManager" instance=ExtResource("7_ahn1g")]
 position = Vector2(1020, 0)
 
-[connection signal="body_entered" from="plate/plateBody" to="SpawnManager/Spawner" method="_on_plate_body_body_entered"]
+[node name="plate2" parent="." instance=ExtResource("5_4cem8")]
+position = Vector2(1010, 351)
+
 [connection signal="body_entered" from="table" to="SpawnManager/Spawner" method="_on_table_body_entered"]
