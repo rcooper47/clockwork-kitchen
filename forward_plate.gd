@@ -26,8 +26,8 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
-	for index in get_slide_collision_count():
-		var collision := get_slide_collision(index)
-		var body := collision.get_collider()
-		print("Collided with: ", body.name)
+	#for index in get_slide_collision_count():
+		#var collision := get_slide_collision(index)
+		#var body := collision.get_collider()
+		#print("Collided with: ", body.name)
 

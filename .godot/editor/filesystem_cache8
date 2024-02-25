@@ -1,10 +1,10 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1708834826
-food.gd::GDScript::-1::1708834811::0::1::::<>RigidBody2D<>::
-food.tscn::PackedScene::2943374376137753778::1708834811::0::1::::<><>::res://food.gd
+::res://::1708835570
+food.gd::GDScript::-1::1708835216::0::1::::<>RigidBody2D<>::
+food.tscn::PackedScene::2943374376137753778::1708835243::0::1::::<><>::res://food.gd
 forward_plate.gd::GDScript::-1::1708834811::0::1::::<>CharacterBody2D<>::
 icon.svg::CompressedTexture2D::4481596421184463047::1708821690::1708834827::1::::<><>::
-sample.tscn::PackedScene::6961035819116300856::1708834811::0::1::::<><>::uid://bh617frlfuel3::::res://food.tscn<>res://table.gd<>res://Spawner.gd<>res://forward_plate.gd<>uid://b436idpwesawl::::res://icon.svg
+sample.tscn::PackedScene::6961035819116300856::1708835243::0::1::::<><>::res://table.gd<>res://forward_plate.gd<>uid://b436idpwesawl::::res://icon.svg<>res://SpawnerManager.gd<>uid://dot76xlf4lh7g::::res://spawner.tscn
 Spawner.gd::GDScript::-1::1708834811::0::1::::<>Marker2D<>::
 spawner.tscn::PackedScene::8183128568014745194::1708834811::0::1::::<><>::res://Spawner.gd
 SpawnerManager.gd::GDScript::-1::1708834811::0::1::::<>Node2D<>::

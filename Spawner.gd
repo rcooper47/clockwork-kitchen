@@ -22,8 +22,10 @@ func _on_timer_timeout():
 
 func _on_table_body_entered(body):
 	body.queue_free()
+	print("table")
 
 
 func _on_plate_body_body_entered(body):
 	body.queue_free()
+	print("plate")
 

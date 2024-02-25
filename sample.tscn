@@ -34,7 +34,7 @@ collision_layer = 16
 collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="plate/plateBody"]
-position = Vector2(354, 356)
+position = Vector2(356, 360)
 shape = SubResource("CircleShape2D_ljwgx")
 
 [node name="Sprite2D" type="Sprite2D" parent="plate"]
@@ -77,6 +77,7 @@ offset_bottom = 656.0
 color = Color(0.764706, 0.65098, 0.317647, 1)
 
 [node name="SpawnManager" type="Node2D" parent="."]
+position = Vector2(0, 31)
 script = ExtResource("6_6syyh")
 
 [node name="Spawner" parent="SpawnManager" instance=ExtResource("7_ahn1g")]
@@ -96,3 +97,6 @@ position = Vector2(850, 0)
 
 [node name="Spawner6" parent="SpawnManager" instance=ExtResource("7_ahn1g")]
 position = Vector2(1020, 0)
+
+[connection signal="body_entered" from="plate/plateBody" to="SpawnManager/Spawner" method="_on_plate_body_body_entered"]
+[connection signal="body_entered" from="table" to="SpawnManager/Spawner" method="_on_table_body_entered"]
