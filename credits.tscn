@@ -1,10 +1,10 @@
 [gd_scene load_steps=2 format=3 uid="uid://bu10xk2j2ht53"]
 
-[ext_resource type="Texture2D" uid="uid://dg1p4cxk8oi5r" path="res://Assets/generic background.png" id="1_gixkm"]
+[ext_resource type="Texture2D" uid="uid://coj6xpuea45i0" path="res://Assets/resized generic background.png" id="1_74qv7"]
 
 [node name="Credits" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("1_gixkm")
+texture = ExtResource("1_74qv7")

@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://cwwfdfx3wbmy3"]
 
-[ext_resource type="Texture2D" uid="uid://dg1p4cxk8oi5r" path="res://Assets/generic background.png" id="1_6q4fw"]
 [ext_resource type="Script" path="res://how_to_play.gd" id="1_dt2qp"]
+[ext_resource type="Texture2D" uid="uid://coj6xpuea45i0" path="res://Assets/resized generic background.png" id="2_oenav"]
 [ext_resource type="FontFile" uid="uid://buuhuumykppev" path="res://Bungee/Bungee-Regular.ttf" id="2_s6do3"]
 [ext_resource type="Texture2D" uid="uid://k4wbsknh8sbd" path="res://Assets/Start Button transparent 2.png" id="3_je1fx"]
 [ext_resource type="Texture2D" uid="uid://cem7k4plbhjtg" path="res://Assets/Return to Main Menu Button transparent.png" id="4_636jm"]
@@ -12,7 +12,7 @@ script = ExtResource("1_dt2qp")
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("1_6q4fw")
+texture = ExtResource("2_oenav")
 
 [node name="MarginContainer" type="MarginContainer" parent="TextureRect"]
 layout_mode = 1
