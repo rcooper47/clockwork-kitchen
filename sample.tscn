@@ -77,7 +77,6 @@ offset_bottom = 656.0
 color = Color(0.764706, 0.65098, 0.317647, 1)
 
 [node name="SpawnManager" type="Node2D" parent="."]
-position = Vector2(0, 31)
 script = ExtResource("6_6syyh")
 
 [node name="Spawner" parent="SpawnManager" instance=ExtResource("7_ahn1g")]

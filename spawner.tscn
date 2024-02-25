@@ -3,5 +3,4 @@
 [ext_resource type="Script" path="res://Spawner.gd" id="1_y73gl"]
 
 [node name="Spawner" type="Marker2D"]
-position = Vector2(32, 27)
 script = ExtResource("1_y73gl")
