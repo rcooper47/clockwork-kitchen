@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Clockwork Kitchen"
-run/main_scene="res://sample.tscn"
+run/main_scene="res://start_screen.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -21,7 +21,8 @@ Global="*res://Global.gd"
 
 [display]
 
-window/size/viewport_width=1000
+window/size/viewport_width=1800
+window/size/viewport_height=1013
 window/stretch/mode="viewport"
 <<<<<<<HEADwindow/size/initial_position_type=0
 

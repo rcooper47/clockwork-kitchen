@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://duygnxfbcmypm"
+path="res://.godot/imported/Constancy Part Three.mp3-6e1781eca0b4f8f1448d56e0a3e7addb.mp3str"
+
+[deps]
+
+source_file="res://Assets/Music/Constancy Part Three.mp3"
+dest_files=["res://.godot/imported/Constancy Part Three.mp3-6e1781eca0b4f8f1448d56e0a3e7addb.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
