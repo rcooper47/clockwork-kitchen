@@ -1,14 +1,75 @@
-[gd_scene load_steps=6 format=3 uid="uid://cksoir7djc5q3"]
+[gd_scene load_steps=19 format=3 uid="uid://cksoir7djc5q3"]
 
 [ext_resource type="Script" path="res://rewind_plate.gd" id="1_buk1d"]
 [ext_resource type="Script" path="res://plateBody.gd" id="2_npvvf"]
-[ext_resource type="Texture2D" uid="uid://b436idpwesawl" path="res://icon.svg" id="2_wl7lr"]
+[ext_resource type="Texture2D" uid="uid://cnsk10i5sb0fh" path="res://Assets/Characters/full.png" id="3_aeo4r"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/state_chart.gd" id="4_mfwlk"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/compound_state.gd" id="5_l71ee"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/animation_tree_state.gd" id="6_olxhr"]
+[ext_resource type="Script" path="res://addons/godot_state_charts/transition.gd" id="7_yj7ry"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_ljwgx"]
-radius = 52.1536
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iwl7y"]
+size = Vector2(54, 8.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5yyel"]
-size = Vector2(135, 116)
+size = Vector2(42, 50)
+
+[sub_resource type="Animation" id="Animation_n7ruo"]
+resource_name = "Idle"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [12, 22]
+}
+
+[sub_resource type="Animation" id="Animation_hyteh"]
+resource_name = "Moving"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 11]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kkf2v"]
+_data = {
+"Idle": SubResource("Animation_n7ruo"),
+"Moving": SubResource("Animation_hyteh")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_3rdwt"]
+animation = &"Idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_woc46"]
+animation = &"Moving"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_08k6f"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_v7472"]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0vpfp"]
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_usasy"]
+states/Idle/node = SubResource("AnimationNodeAnimation_3rdwt")
+states/Idle/position = Vector2(359, 100)
+states/Moving/node = SubResource("AnimationNodeAnimation_woc46")
+states/Moving/position = Vector2(529, 100)
+transitions = ["Start", "Idle", SubResource("AnimationNodeStateMachineTransition_08k6f"), "Idle", "Moving", SubResource("AnimationNodeStateMachineTransition_v7472"), "Moving", "Idle", SubResource("AnimationNodeStateMachineTransition_0vpfp")]
 
 [node name="rewindPlate" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
@@ -22,11 +83,53 @@ collision_mask = 4
 script = ExtResource("2_npvvf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="plateBody"]
-position = Vector2(0, -50)
-shape = SubResource("CircleShape2D_ljwgx")
+position = Vector2(-1, -30.25)
+shape = SubResource("RectangleShape2D_iwl7y")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_wl7lr")
+position = Vector2(0, 9.53674e-07)
+scale = Vector2(2.46875, 2.60938)
+texture = ExtResource("3_aeo4r")
+hframes = 31
+frame = 22
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 7)
 shape = SubResource("RectangleShape2D_5yyel")
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_kkf2v")
+}
+tree_root = SubResource("AnimationNodeStateMachine_usasy")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_kkf2v")
+}
+
+[node name="StateChart" type="Node" parent="."]
+script = ExtResource("4_mfwlk")
+
+[node name="AnimationControl" type="Node" parent="StateChart"]
+script = ExtResource("5_l71ee")
+initial_state = NodePath("Idle")
+
+[node name="Idle" type="Node" parent="StateChart/AnimationControl"]
+script = ExtResource("6_olxhr")
+animation_tree = NodePath("../../../AnimationTree")
+
+[node name="ToMove" type="Node" parent="StateChart/AnimationControl/Idle"]
+script = ExtResource("7_yj7ry")
+to = NodePath("../../Move")
+event = &"moving"
+
+[node name="Move" type="Node" parent="StateChart/AnimationControl"]
+script = ExtResource("6_olxhr")
+animation_tree = NodePath("../../../AnimationTree")
+
+[node name="ToIdle" type="Node" parent="StateChart/AnimationControl/Move"]
+script = ExtResource("7_yj7ry")
+to = NodePath("..")
+event = &"idling"
