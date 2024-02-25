@@ -1,5 +1,5 @@
 extends Marker2D
-@onready var timer = %Timer
+#@onready var timer = $Timer
 
 func _ready():
 	pass
