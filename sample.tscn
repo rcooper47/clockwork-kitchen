@@ -73,6 +73,10 @@ color = Color(0.0901961, 0.188235, 1, 1)
 collision_mask = 7
 script = ExtResource("2_5txlr")
 
+[node name="CollisionShape2D" type="CollisionShape2D" parent="table"]
+position = Vector2(570, 581)
+shape = SubResource("RectangleShape2D_v04c3")
+
 [node name="ColorRect" type="ColorRect" parent="table"]
 visible = false
 offset_left = -8.0
@@ -81,9 +85,11 @@ offset_right = 1164.0
 offset_bottom = 656.0
 color = Color(0.764706, 0.65098, 0.317647, 1)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="table"]
-position = Vector2(570, 581)
-shape = SubResource("RectangleShape2D_v04c3")
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Spawner" type="Marker2D" parent="."]
+position = Vector2(32, 27)
+script = ExtResource("3_yiyl5")
 
 [connection signal="timeout" from="Timer" to="Spawner" method="_on_timer_timeout"]
 [connection signal="body_entered" from="plate/plateBody" to="food" method="_on_plate_body_body_entered"]
