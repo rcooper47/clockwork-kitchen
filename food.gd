@@ -1,9 +1,12 @@
 extends RigidBody2D
 var food_names = ["grape", "wine", "milk", "cheese", "fish", "baked fish", "coffee beans", "coffee"]
 var food_colors = {"grape":Color('#8c3cff'), "wine":Color('#8c119b'), "milk":Color(1, 1, 1), "cheese":Color('#ffff98'), "fish":Color('#82ffff'), 'baked fish':Color('#f26f75'), "coffee beans":Color('#513918'), "coffee":Color('#ca9855')}
+@export var food_id: String 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	self.name = food_names.pick_random()
+	food_id = self.name
+	#print(food_id)
 	var rect = get_child(1)
 	#print(self.name)
 	#print(food_colors[self.name])
@@ -13,7 +16,7 @@ func _ready():
 	#self.connect(
 		#'YOUR_SIGNAL_NAME',
 		#get_node('/root/plate/plateBody'),
-		#'_on_table_body_entered'
+		#'is_active'
 	#)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
