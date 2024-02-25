@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://cm5yia14suqd5"]
+
+[ext_resource type="Texture2D" uid="uid://c3hqr2trx7t7x" path="res://Assets/Orders/coffee order.png" id="1_7o12h"]
+[ext_resource type="Script" path="res://coffee_order.gd" id="1_rcwu3"]
+
+[node name="Sprite2D" type="Sprite2D"]
+texture = ExtResource("1_7o12h")
+script = ExtResource("1_rcwu3")

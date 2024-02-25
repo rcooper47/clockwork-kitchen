@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://13tv60nn1qtq"]
+
+[ext_resource type="Texture2D" uid="uid://daj0ly54s4fd6" path="res://Assets/Orders/fish order.png" id="1_1xt58"]
+[ext_resource type="Script" path="res://fish_order.gd" id="1_77sij"]
+
+[node name="Sprite2D" type="Sprite2D"]
+position = Vector2(3, 7)
+texture = ExtResource("1_1xt58")
+script = ExtResource("1_77sij")

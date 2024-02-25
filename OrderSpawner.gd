@@ -10,10 +10,14 @@ func _process(delta):
 	pass
 
 func spawn_recipe():
-	var recipe = preload("res://wine_order.tscn")
-	var new_recipe  = recipe.instantiate()
-	add_child(new_recipe)
-	new_recipe.add_to_group("active_recipes")
+	var recipes = [preload("res://wine_order.tscn"), preload("res://CoffeeOrder.tscn"),
+	 preload("res://cheese_order.tscn"), preload("res://baked_fish.tscn"), 
+	preload("res://fish_order.tscn"), preload("res://milk_order.tscn"),
+	preload("res://grape_order.tscn"), preload("res://coffee_bean_order.tscn")]
+	for recipe in recipes:
+		var new_recipe  = recipe.instantiate()
+		add_child(new_recipe)
+		new_recipe.add_to_group("active_recipes")
 	#var active_recipes = get_tree().get_nodes_in_group("active_recipes")
 	#print(active_recipes)
 	#self.get_parent().active_recipes.append(new_recipe.ingredient)
