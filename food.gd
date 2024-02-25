@@ -3,7 +3,7 @@ var food_names = ["grape", "wine", "milk", "cheese", "fish", "coffee beans", "co
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	self.name = food_names.pick_random()
 	#self.connect(
 		#'YOUR_SIGNAL_NAME',
 		#get_node('/root/plate/plateBody'),
