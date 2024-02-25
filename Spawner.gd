@@ -19,3 +19,9 @@ func _on_timer_timeout():
 	pass
 	#spawn_food()
 	 # Replace with function body.
+func _on_table_body_entered(body):
+	body.queue_free()
+
+
+func _on_plate_body_body_entered(body):
+	body.queue_free()
