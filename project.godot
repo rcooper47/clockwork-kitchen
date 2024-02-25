@@ -26,6 +26,10 @@ window/size/viewport_height=1013
 window/stretch/mode="viewport"
 <<<<<<<HEADwindow/size/initial_position_type=0
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/godot_state_charts/plugin.cfg")
+
 [input]
 
 p2_right={
