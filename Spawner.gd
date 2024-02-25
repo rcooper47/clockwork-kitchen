@@ -13,9 +13,13 @@ func spawn_food():
 	var new_food  = food_scene.instantiate()
 	add_child(new_food)
 	get_tree().create_timer(randf_range(2, 3)).timeout.connect(spawn_food)
-	print("hi")
 
 func _on_timer_timeout():
 	pass
 	#spawn_food()
 	 # Replace with function body.
+
+
+func _on_table_body_entered(body):
+	body.queue_free()
+	print(body.name)
