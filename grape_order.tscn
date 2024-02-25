@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://dvkclbdfcrm31"]
+[gd_scene load_steps=3 format=3 uid="uid://dw5i058ggtlic"]
 
 [ext_resource type="Script" path="res://grape_order.gd" id="1_5ueoc"]
 [ext_resource type="Texture2D" uid="uid://cbeqqrdqr2n10" path="res://Assets/Orders/grapes order.png" id="1_3444n"]

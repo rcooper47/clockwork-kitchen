@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://e32v5caid0i4"]
+[gd_scene load_steps=3 format=3 uid="uid://sukiq0yvdh2i"]
 
 [ext_resource type="Script" path="res://coffee_bean.gd" id="1_ndyrs"]
 [ext_resource type="Texture2D" uid="uid://sbdma7n25n0y" path="res://Assets/Orders/coffee beans order.png" id="1_nf01x"]

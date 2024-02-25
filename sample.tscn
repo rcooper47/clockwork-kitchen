@@ -32,7 +32,7 @@ offset_bottom = 1080.0
 texture = ExtResource("1_jkkdi")
 
 [node name="Order Placeholder" type="ColorRect" parent="."]
-offset_right = 993.0
+offset_right = 1018.0
 offset_bottom = 145.0
 color = Color(1, 0.839216, 0.67451, 1)
 
@@ -58,10 +58,11 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_t2e6g")
 theme_override_font_sizes/font_size = 40
+horizontal_alignment = 1
 
 [node name="TimerContainer" type="VBoxContainer" parent="."]
-offset_left = 760.0
-offset_right = 984.0
+offset_left = 743.0
+offset_right = 982.0
 offset_bottom = 86.0
 
 [node name="Label" type="Label" parent="TimerContainer"]
@@ -69,7 +70,7 @@ layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("3_t2e6g")
 theme_override_font_sizes/font_size = 40
-text = "Time Left"
+text = "Time Left:"
 
 [node name="TimerLabel" type="Label" parent="TimerContainer"]
 layout_mode = 2
@@ -162,15 +163,15 @@ shape = SubResource("RectangleShape2D_xivha")
 script = ExtResource("8_d3027")
 
 [node name="OrderSpawner" type="Marker2D" parent="OrderManager"]
-position = Vector2(512, 40)
+position = Vector2(280, 38)
 script = ExtResource("9_xf0va")
 
 [node name="OrderSpawner2" type="Marker2D" parent="OrderManager"]
-position = Vector2(640, 38)
+position = Vector2(440, 38)
 script = ExtResource("9_xf0va")
 
 [node name="OrderSpawner3" type="Marker2D" parent="OrderManager"]
-position = Vector2(767, 38)
+position = Vector2(600, 38)
 script = ExtResource("9_xf0va")
 
 [node name="GameTimer" type="Timer" parent="."]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://ciw7yhka6hhcv"]
+[gd_scene load_steps=3 format=3 uid="uid://j8hhxlk2djjl"]
 
 [ext_resource type="Script" path="res://baked_fish.gd" id="1_gfduu"]
 [ext_resource type="Texture2D" uid="uid://b34b5bda86oai" path="res://Assets/Orders/baked fish order.png" id="1_mf76t"]
